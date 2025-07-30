@@ -21,12 +21,15 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     home-manager,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+  in {
     nixosConfigurations."asus-m3400qa" = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       specialArgs = {inherit inputs;};
       modules = [
         ./hardware-configuration.nix
@@ -41,6 +44,11 @@
           };
         }
       ];
+    };
+
+    apps.${system}.install = {
+      type = "app";
+      program = "${self}/install.sh";
     };
   };
 }
