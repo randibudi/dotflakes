@@ -1,4 +1,6 @@
 {
+  imports = [./nixos-modules];
+
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -13,13 +15,12 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.xserver.enable = true;
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
 
   services.xserver.xkb = {
     layout = "us";
     variant = "colemak_dh";
   };
+  console.useXkbConfig = true;
 
   services.libinput.enable = true;
 

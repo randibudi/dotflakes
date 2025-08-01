@@ -1,4 +1,6 @@
 {
+  imports = [./home-modules];
+
   home = {
     username = "randizzwell";
     homeDirectory = "/home/randizzwell";
