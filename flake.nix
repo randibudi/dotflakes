@@ -24,6 +24,10 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    textfox = {
+      url = "github:adriankarlen/textfox";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
