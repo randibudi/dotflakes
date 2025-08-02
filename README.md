@@ -4,7 +4,7 @@ My personal NixOS configuration using Nix flakes.
 
 ## Installation
 
-To install this configuration:
+To install NixOS using this flake:
 
 1. Boot from NixOS minimal ISO
 2. Connect to internet
@@ -15,3 +15,5 @@ sudo nix \
 --experimental-features "nix-command flakes" \
 run github:randizzwell/dotflakes#install
 ```
+
+After installation, the flake will be available at `~/.dotflakes`.
