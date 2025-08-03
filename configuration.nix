@@ -53,6 +53,7 @@
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
     trusted-users = ["randizzwell"];
+    accept-flake-config = true;
     warn-dirty = false;
   };
 
