@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   imports = [./nixos-modules];
 
   boot.loader = {
@@ -48,6 +48,11 @@
   };
 
   nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = with pkgs; [
+    alejandra
+    gnome-disk-utility
+  ];
 
   programs.nh = {
     enable = true;
