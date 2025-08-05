@@ -6,9 +6,20 @@
     efi.canTouchEfiVariables = true;
   };
 
-  networking = {
-    hostName = "asus-m3400qa";
-    networkmanager.enable = true;
+  networking.hostName = "asus-m3400qa";
+
+  networking.networkmanager = {
+    enable = true;
+    plugins = with pkgs; [
+      networkmanager-l2tp
+      networkmanager-strongswan
+    ];
+  };
+  services.strongswan = {
+    enable = true;
+    secrets = [
+      "ipsec.d/ipsec.nm-l2tp.secrets"
+    ];
   };
 
   time.timeZone = "Asia/Jakarta";
