@@ -13,6 +13,19 @@
     package = pkgs.niri-unstable;
   };
 
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+    config.niri = {
+      default = "gtk";
+      "org.freedesktop.impl.portal.Secret" = "kwallet";
+      "org.freedesktop.impl.portal.ScreenCast" = "gnome";
+    };
+  };
+
   services.greetd = {
     enable = true;
     settings.default_session = {
