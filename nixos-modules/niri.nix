@@ -35,9 +35,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    alacritty
     brightnessctl
     fuzzel
+    ghostty
     mako
     networkmanagerapplet
     pavucontrol
