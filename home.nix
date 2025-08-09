@@ -1,4 +1,8 @@
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [./home-modules];
 
   home = {
@@ -6,6 +10,12 @@
     homeDirectory = "/home/randizzwell";
     stateVersion = "25.05";
   };
+
+  home.packages = with pkgs; let
+    nvf = inputs.nvf-config.packages.${pkgs.system}.default;
+  in [
+    nvf
+  ];
 
   programs.git = {
     enable = true;
