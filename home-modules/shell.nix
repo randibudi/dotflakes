@@ -6,11 +6,12 @@
     '';
   };
 
-  programs.ghostty = {
+  programs.wezterm = {
     enable = true;
-    enableFishIntegration = true;
-    settings = {
-      command = "fish";
-    };
+    extraConfig = ''
+      return {
+        default_prog = { "fish" }
+      }
+    '';
   };
 }

@@ -37,11 +37,11 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
     fuzzel
-    ghostty
     mako
     networkmanagerapplet
     pavucontrol
     waybar
+    wezterm
     xwayland-satellite-unstable
   ];
 
