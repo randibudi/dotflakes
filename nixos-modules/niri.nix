@@ -29,7 +29,7 @@
   services.greetd = {
     enable = true;
     settings.default_session = {
-      command = "${lib.getExe pkgs.greetd.tuigreet} --remember --time --cmd niri-session";
+      command = "${lib.getExe pkgs.tuigreet} --remember --time --cmd niri-session";
       user = "greeter";
     };
   };
