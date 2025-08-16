@@ -29,7 +29,6 @@
     };
 
     cursor = {
-      size = 24;
       hide-when-typing = true;
     };
 
@@ -62,12 +61,6 @@
       gaps = 16;
       center-focused-column = "never";
       default-column-width.proportion = 0.5;
-      focus-ring = {
-        enable = true;
-        width = 4;
-        active.color = "#7fc8ff";
-        inactive.color = "#505050";
-      };
     };
 
     window-rules = [
