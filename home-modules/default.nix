@@ -5,5 +5,6 @@
     ./swayidle.nix
     ./shell.nix
     ./textfox.nix
+    ./ssh.nix
   ];
 }
