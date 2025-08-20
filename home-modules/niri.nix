@@ -67,6 +67,8 @@
       {
         matches = [
           {app-id = "firefox";}
+          {app-id = "code";}
+          {app-id = "BeeperTexts";}
         ];
         open-maximized = true;
       }
