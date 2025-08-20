@@ -14,7 +14,10 @@
   home.packages = with pkgs; let
     nvf = inputs.nvf-config.packages.${pkgs.system}.default;
   in [
+    beeper
     nvf
+    sshs
+    vscode
   ];
 
   programs.git = {
