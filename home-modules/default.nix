@@ -6,5 +6,6 @@
     ./shell.nix
     ./textfox.nix
     ./ssh.nix
+    ./git.nix
   ];
 }
