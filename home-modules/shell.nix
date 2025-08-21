@@ -6,6 +6,10 @@
     '';
   };
 
+  programs.starship = {
+    enable = true;
+  };
+
   programs.wezterm = {
     enable = true;
     extraConfig = ''
