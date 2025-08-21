@@ -15,6 +15,7 @@
     nvf = inputs.nvf-config.packages.${pkgs.system}.default;
   in [
     beeper
+    filezilla
     nvf
     sshs
     vscode
