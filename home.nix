@@ -15,9 +15,14 @@
     nvf = inputs.nvf-config.packages.${pkgs.system}.default;
   in [
     beeper
+    devenv
     filezilla
     nvf
     sshs
     vscode
   ];
+
+  programs.direnv = {
+    enable = true;
+  };
 }
