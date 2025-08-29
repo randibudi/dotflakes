@@ -18,8 +18,11 @@
     devenv
     filezilla
     nvf
+    p7zip
     sshs
+    unzip
     vscode
+    zip
   ];
 
   programs.direnv = {
