@@ -15,12 +15,8 @@
       networkmanager-strongswan
     ];
   };
-  services.strongswan = {
-    enable = true;
-    secrets = [
-      "ipsec.d/ipsec.nm-l2tp.secrets"
-    ];
-  };
+  services.strongswan.enable = true;
+  environment.etc."strongswan.conf".text = "";
 
   time.timeZone = "Asia/Jakarta";
   i18n.defaultLocale = "en_US.UTF-8";
