@@ -35,12 +35,10 @@
   };
 
   environment.systemPackages = with pkgs; [
-    brightnessctl
-    fuzzel
-    mako
+    inputs.noctalia.packages.${system}.default
+    inputs.quickshell.packages.${system}.default
     networkmanagerapplet
     pavucontrol
-    waybar
     wezterm
     xwayland-satellite-unstable
   ];

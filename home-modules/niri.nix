@@ -5,7 +5,7 @@
     spawn-at-startup = [
       {command = ["xwayland-satellite"];}
       {command = ["nm-applet" "--indicator"];}
-      {command = ["waybar"];}
+      {command = ["noctalia-shell"];}
     ];
 
     environment = {
@@ -96,15 +96,15 @@
 
     binds = {
       "Mod+Return".action.spawn = "alacritty";
-      "Mod+D".action.spawn = "fuzzel";
+      "Mod+D".action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
 
-      "XF86AudioRaiseVolume".action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"];
-      "XF86AudioLowerVolume".action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"];
-      "XF86AudioMute".action.spawn = ["wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"];
-      "XF86AudioMicMute".action.spawn = ["wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"];
+      "XF86AudioRaiseVolume".action.spawn = ["noctalia-shell" "ipc" "call" "volume" "increase"];
+      "XF86AudioLowerVolume".action.spawn = ["noctalia-shell" "ipc" "call" "volume" "decrease"];
+      "XF86AudioMute".action.spawn = ["noctalia-shell" "ipc" "call" "volume" "muteOutput"];
+      "XF86AudioMicMute".action.spawn = ["noctalia-shell" "ipc" "call" "volume" "muteInput"];
 
-      "XF86MonBrightnessUp".action.spawn = ["brightnessctl" "set" "5%+"];
-      "XF86MonBrightnessDown".action.spawn = ["brightnessctl" "set" "5%-"];
+      "XF86MonBrightnessUp".action.spawn = ["noctalia-shell" "ipc" "call" "brightness" "increase"];
+      "XF86MonBrightnessDown".action.spawn = ["noctalia-shell" "ipc" "call" "brightness" "decrease"];
 
       "Mod+O".action.toggle-overview = {};
       "Mod+Q".action.close-window = {};
